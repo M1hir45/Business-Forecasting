@@ -87,3 +87,6 @@ accuracy(hw_forecast_all)
 hw_residual <- hw_forecast_all$residuals
 hw_residual
 hist(hw_residual)
+auto.arima(Projdata_TS[,-1])
+forecast(auto.arima(Projdata_TS[,-1]))
+plot(forecast(auto.arima(Projdata_TS[,-1])))
